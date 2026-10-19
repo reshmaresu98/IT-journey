@@ -1,4 +1,5 @@
 # IT-journey
+
 Start with HTML
 
 Heading
@@ -9,6 +10,7 @@ heading tag has opening and closing tag.
 We use <h1></h1> tag to write big heading like news paper and <h2></h2>, <h3></h3> to write second important heading.
 
 Paragraph
+
 Paragraph also has starting and ending tag.
 Paragraph tag= <p>...</p>
 Normally we use <p> tag to write body paragraph.
