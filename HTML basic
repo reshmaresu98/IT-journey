@@ -1,0 +1,10 @@
+Image tag in html
+<img> is an image tag used to import image from different location.
+  We can copy the image address from the browser and paste in image tag.
+  <img src="image link" width="100%" >
+  src= source of image
+width="100%" make picture flexible as screen and text.
+<img> tag doesnot have end tag.
+  
+  * some may use / between img and src which is normal like this:
+<img / src="link" > 
