@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.first {
+    background-color: #ff0000;
+    height: 100px;
+    
+}
+.second {
+    background-color: #1e00ff;
+    height: 100px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.third {
+    background-color: #0be328;
+    height: 100px;
+}
