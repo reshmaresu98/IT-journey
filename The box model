@@ -1,0 +1,35 @@
+The box model has 4 layes.
+--> Margin
+--> Border
+--> Padding
+--> content
+
+Margin is the first layes which give place outside of content, either left or right.
+Here is Example: 
+margin-top="20px";
+margin-left="30px"; / auto;
+margin-right="25px"; / auto;
+margin-buttom="10px";
+Whereas here comes interesting part. When we need content in center of the page, we have to play with margin and make it happen. Here's the code:
+margin-left= auto;
+margin-right= auto;
+
+Border is the second layer which make border line visible, control thickness of the border.
+To make border line visible we can just write:
+border=2px solid black;
+Here solid black is the color of the border we can change as our need.
+border-radius: 100px;
+Border-radius make the border line curver and ovel making the corder more soft.
+
+Padding is the third layer, it work similar as margin the writing style is same, we just need to change px and change margin into padding. That's it
+It make space for content to breath inside the border line.
+We want the content in right side making space in left...
+padding-right=0; / padding-left=50px;
+
+Content is the middle part/ last layer which is cover by padding then border then margin.
+
+This model is called box model, because it acts like one.
+
+
+
+
