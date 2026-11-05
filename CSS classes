@@ -1,0 +1,14 @@
+CSS classes
+We use class to style our project/ work.
+example: (In HTML)
+- <body class="text">
+- <div class="click">
+like this we can make class in every element tag in html and style into different ( .css) file.
+example: (In CSS)
+.text {
+    margin-top= 50px  ;
+}
+.click {
+    background-image= #000000;
+}
+Always use (.) before using class name to style.

@@ -1,0 +1,9 @@
+In CSS there is 2 type of elements:
+In-line elements
+Block elements
+Syntax goes like: 
+img {
+  display:In-line; / block;
+}
+display: in-line ; enable images show along side together.
+display: block ; enable images show step by step like layers .
