@@ -1,0 +1,25 @@
+# CSS Flexbox
+
+## What is Flexbox?
+
+Flexbox (Flexible Box Layout) is a CSS layout system that helps arrange elements inside a container. It makes it easier to align items horizontally or vertically and manage the space between them.
+
+## Important Flexbox Properties
+
+1. **display: flex** – Activates the Flexbox layout.
+2. **flex-direction** – Defines the direction of items, either row or column.
+3. **justify-content** – Aligns items along the main axis.
+4. **align-items** – Aligns items along the cross axis.
+5. **flex-wrap** – Allows items to move to the next line when there is not enough space.
+6. **gap** – Adds space between flex items.
+
+## Main Axis and Cross Axis
+
+- Main Axis: The primary direction in which flex items are arranged.
+- Cross Axis: The direction perpendicular to the main axis.
+
+## What I Learned
+
+Today, I learned how Flexbox helps create flexible and organized webpage layouts. I practiced understanding item alignment, direction, spacing, and positioning.
+
+**Key takeaway:** Flexbox makes webpage layouts easier, cleaner, and more responsive.
