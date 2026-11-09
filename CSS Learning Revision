@@ -1,0 +1,59 @@
+# CSS Learning Revision
+
+## Today's Learning
+
+Today, I revised the CSS concepts I have learned so far and practised applying them to my Google Clone project.
+
+## Topics Revised
+
+### 1. CSS Syntax
+CSS uses selectors and declaration blocks to style HTML elements.
+
+### 2. Inline vs Block Elements
+- Inline elements take only the space they need.
+- Block elements usually take the full available width and start on a new line.
+
+### 3. Box Model
+Every HTML element is treated as a box consisting of:
+- Content
+- Padding
+- Border
+- Margin
+
+### 4. Div and Classes
+- `div` is a container used to group HTML elements.
+- Classes help apply the same CSS styles to multiple elements.
+
+### 5. Margin and Padding
+- Margin creates space outside an element.
+- Padding creates space inside an element.
+
+### 6. Borders
+Borders create a visible boundary around an element.
+
+### 7. Centering Elements
+CSS provides different ways to center elements, including Flexbox.
+
+### 8. Flexbox
+Flexbox helps arrange and align elements inside a container.
+
+Important properties revised:
+- `display: flex`
+- `justify-content`
+- `align-items`
+- `flex-direction`
+- `gap`
+
+## Practical Work
+
+- Modified my Google Clone project.
+- Reviewed the existing HTML and CSS.
+- Identified mistakes in my code.
+- Corrected styling and alignment issues.
+- Simplified the code to make it easier to understand.
+
+## My Takeaway
+
+Revision helps me understand concepts better. Instead of only learning new topics, I want to practise, identify mistakes, and improve my existing projects.
+
+**Learning is a continuous process. Keep practising!**
