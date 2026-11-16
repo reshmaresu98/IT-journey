@@ -1,0 +1,12 @@
+A quick-reference guide for embedding, routing, and sizing images in web projects.
+1. Basic syntax
+- The <img> tag is self-closing(doesn't need a closing (</img> tag ) and requires two core attributes:
+<img src="path_to_image.jpg" alt="Clear text description of the image">
+ -> src(source): The file path telling the browser where to find the image.
+-> alt (Alternative Text): Text displayed if the image fails to load; crucial for SEO and screen readers.
+2. File Directory Paths
+ Use relative notation to point the src attribute to the correct folder location:
+->  ./image.png(current directory): Links to an image located in the exact same folder as your HTML file.
+->   ../image.png (Parent Directory): Moves up one folder level to look for the image.
+->    /images/image.png (root directory): start looking from the absolute top-level folder of your project repository.
+
