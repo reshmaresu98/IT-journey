@@ -1,0 +1,111 @@
+# Business Profile Card – HTML, CSS, JavaScript and Accessibility
+
+A business profile card may look like a small webpage, but creating one involves several important concepts. HTML provides the structure, CSS controls the appearance, and JavaScript can add interactive behaviour. Along with these, proper file organisation and image accessibility help make the project easier to maintain and use.
+
+## 1. Comments in HTML and CSS
+
+When writing code, it is not always easy to remember the purpose of every section, especially when a file contains many elements and styles. Comments help explain the code without changing the webpage.
+
+HTML comments use this syntax:
+
+`<!-- This is an HTML comment -->`
+
+CSS comments use:
+
+`/* This is a CSS comment */`
+
+Comments are not displayed as webpage content. They are useful for separating sections, explaining specific styles, and making code easier to understand when editing it later.
+
+**Small detail, useful effect:** Well-placed comments make a project easier to read and maintain, particularly when several files are involved.
+
+## 2. Connecting an External JavaScript File
+
+HTML, CSS, and JavaScript have different responsibilities. HTML creates the page structure, CSS handles its design, and JavaScript controls behaviour and interaction.
+
+JavaScript can be written directly inside an HTML file, but keeping it in a separate file makes the project more organised.
+
+For example:
+
+`<script src="script.js"></script>`
+
+The `src` attribute tells the browser where to find the JavaScript file.
+
+Keeping separate files also makes it easier to locate errors and update one part of a project without unnecessarily changing another.
+
+**Small detail, useful effect:** A correctly linked JavaScript file allows the browser to load the code needed for interactive features.
+
+## 3. The Importance of the Image Alt Attribute
+
+Adding an image is not just about displaying it. We should also consider visitors who cannot see the image and situations where the image does not load.
+
+The `alt` attribute provides alternative text describing an image.
+
+For example:
+
+`<img src="profile.jpg" alt="Profile picture of a web developer">`
+
+It has several benefits:
+
+- **Accessibility:** Screen readers can read the description aloud to help visually impaired users understand the image.
+- **Fallback:** If the image cannot be displayed, the browser can show its alternative text.
+- **Image SEO:** Search engines can use descriptive alt text to better understand the image.
+
+Alt text should describe the image's purpose or content in a clear and concise way. Around 125 characters is a common guideline, not a strict technical limit. Avoid adding unrelated keywords or unnecessary descriptions.
+
+**Small detail, useful effect:** A simple HTML attribute can improve accessibility and provide useful information when an image is unavailable.
+
+## 4. File Paths and Relative Paths
+
+A webpage often depends on multiple files, including stylesheets, JavaScript files, and images. The browser needs the correct path to locate each resource.
+
+A relative path specifies a file's location in relation to the current file.
+
+For example:
+
+- `styles.css` – a CSS file in the same folder.
+- `script.js` – a JavaScript file in the same folder.
+- `images/profile.jpg` – an image inside an `images` folder.
+- `../images/profile.jpg` – an image inside the parent folder's `images` directory.
+
+The `../` notation moves one folder level up, while a folder name followed by `/` moves into that folder.
+
+A small mistake in a file path can prevent an image from appearing, stop a stylesheet from loading, or break JavaScript functionality.
+
+**Small detail, useful effect:** Correct relative paths keep connected files working even when a project is organised into different folders.
+
+## 5. Image Sizing and `object-fit`
+
+Images need to fit the space available in a design. A profile image that is too large can affect the layout of the entire card.
+
+CSS properties such as `width` and `height` control the image dimensions. The `object-fit` property controls how the image fills its container.
+
+For example:
+
+`object-fit: cover;`
+
+With `cover`, the image fills the available area while maintaining its original proportions. Some parts may be cropped if the container and image have different aspect ratios.
+
+Another useful value is `contain`, which keeps the entire image visible but may leave empty space inside the container.
+
+**Small detail, useful effect:** Choosing the right image size and fitting method helps maintain a clean layout without stretching the image.
+
+## 6. CSS Styling and Layout
+
+CSS is responsible for how the profile card looks and how its elements are arranged.
+
+Some commonly used properties include:
+
+- `margin` – creates space outside an element.
+- `padding` – creates space between an element's content and its border.
+- `border` – adds an outline around an element.
+- `border-radius` – rounds the corners.
+- `width` and `height` – control element dimensions.
+- `display: flex` – helps arrange elements and control their alignment.
+
+These properties work together to control spacing, size, alignment, and the overall appearance of a profile card.
+
+Even a small change in padding or margin can affect how much space an element occupies. This is why understanding the CSS box model is important when adjusting layouts.
+
+## Final Understanding
+
+Building a profile card is a useful
