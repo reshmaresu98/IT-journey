@@ -1,0 +1,344 @@
+# CSS Learning Notes – Flexbox, Text Styling, Lists, and Inheritance
+
+## 1. CSS `justify-content`
+
+The `justify-content` property is used to arrange and distribute items along the main axis of a flex container.
+
+When `flex-direction: row` is used, the main axis is horizontal. When `flex-direction: column` is used, the main axis is vertical.
+
+### Different values of justify-content
+
+**1. `flex-start`**
+
+Items are placed at the beginning of the container.
+
+```css
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+```
+
+**2. `flex-end`**
+
+Items are placed at the end of the container.
+
+```css
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+```
+
+**3. `center`**
+
+Items are placed in the center of the container.
+
+```css
+.container {
+    display: flex;
+    justify-content: center;
+}
+```
+
+**4. `space-between`**
+
+Items are distributed evenly, with the first item at the beginning and the last item at the end. There is no extra space at the outer edges.
+
+```css
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+```
+
+**5. `space-around`**
+
+Equal space is placed around each item. The space between two items is twice the space at the outer edges.
+
+```css
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+```
+
+**6. `space-evenly`**
+
+Equal space is placed between every item and the container edges.
+
+```css
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+```
+
+**7. `start` and `end`**
+
+- `start` places items at the beginning of the container's main axis.
+- `end` places items at the end of the container's main axis.
+
+**8. `left` and `right`**
+
+These values align items to the left or right side of the container when that direction is supported.
+
+**Important:** `justify-content` distributes items along the main axis. `align-items` controls their alignment along the cross axis.
+
+---
+
+## 2. CSS Inheritance
+
+CSS inheritance means that some CSS properties automatically pass from a parent element to its child elements.
+
+For example:
+
+```html
+<div class="parent">
+    <h2>Hello World</h2>
+    <p>Learning CSS inheritance.</p>
+</div>
+```
+
+```css
+.parent {
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+```
+
+Here, the heading and paragraph inherit the text color and font family from their parent element.
+
+### The `inherit` keyword
+
+We can also use the `inherit` keyword to tell an element to take a property's value from its parent.
+
+```css
+.child {
+    color: inherit;
+}
+```
+
+### Common inherited properties
+
+- `color`
+- `font-family`
+- `font-size`
+- `font-style`
+- `text-align`
+- `line-height`
+
+### Common non-inherited properties
+
+- `margin`
+- `padding`
+- `border`
+- `width`
+- `height`
+- `background-color`
+
+**Remember:** Not every CSS property is inherited automatically. The `inherit` keyword can explicitly make a child use its parent's computed value.
+
+---
+
+## 3. CSS List Styling
+
+CSS provides different properties to control the appearance and position of list items.
+
+### `list-style-type`
+
+This property changes the marker or bullet style of a list.
+
+```css
+ul {
+    list-style-type: none;
+}
+```
+
+Some other values include:
+
+- `disc` – filled circle
+- `circle` – hollow circle
+- `square` – square marker
+- `decimal` – numbers
+- `lower-alpha` – lowercase letters
+
+### `list-style-position`
+
+This property controls where the list marker appears in relation to the list item's text.
+
+```css
+ul {
+    list-style-position: inside;
+}
+```
+
+Two common values:
+
+- `inside` – the marker is placed inside the list item's content area.
+- `outside` – the marker is placed outside the list item's content area (default).
+
+### `text-indent`
+
+This property controls the indentation of the first line of text in an element.
+
+```css
+p {
+    text-indent: 50px;
+}
+```
+
+The first line of each paragraph starts 50 pixels from its normal starting position.
+
+### `text-transform`
+
+This property changes the capitalization of text.
+
+```css
+h2 {
+    text-transform: capitalize;
+}
+```
+
+Common values:
+
+- `uppercase` – converts text to uppercase.
+- `lowercase` – converts text to lowercase.
+- `capitalize` – makes the first letter of each word uppercase.
+- `none` – keeps the original text casing.
+
+---
+
+## 4. CSS Text Alignment
+
+The `text-align` property controls the horizontal alignment of inline content inside a block element.
+
+```css
+p {
+    text-align: center;
+}
+```
+
+Common values:
+
+- `left` – aligns text to the left.
+- `right` – aligns text to the right.
+- `center` – places text in the center.
+- `justify` – spreads text so that both edges are aligned where possible.
+- `start` – aligns text to the start of the writing direction.
+- `end` – aligns text to the end of the writing direction.
+
+Example:
+
+```css
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+```
+
+---
+
+## 5. CSS Font Family
+
+The `font-family` property defines which font should be used to display text.
+
+```css
+body {
+    font-family: Arial, sans-serif;
+}
+```
+
+Some commonly used font families include:
+
+- Arial
+- Times New Roman
+- Georgia
+- Verdana
+- Courier New
+
+We can also provide multiple fonts as fallbacks.
+
+```css
+p {
+    font-family: "Times New Roman", Georgia, serif;
+}
+```
+
+The browser tries the first font. If it is unavailable, it tries the next one.
+
+---
+
+## 6. Combining CSS Properties in a Practical Example
+
+### HTML
+
+```html
+<div class="container">
+    <h2>My Learning Journey</h2>
+
+    <ul>
+        <li>HTML Basics</li>
+        <li>CSS Styling</li>
+        <li>Flexbox Layout</li>
+    </ul>
+
+    <p>
+        I am learning frontend development
+        and improving my CSS skills every day.
+    </p>
+</div>
+```
+
+### CSS
+
+```css
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    color: darkblue;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+p {
+    text-indent: 50px;
+    text-transform: capitalize;
+}
+```
+
+This example combines Flexbox, text styling, list styling, and inherited properties in one layout.
+
+---
+
+## 7. Quick Revision Table
+
+| CSS Property | Purpose |
+|---|---|
+| `justify-content` | Distributes flex items along the main axis |
+| `align-items` | Aligns items along the cross axis |
+| `color` | Changes text color |
+| `font-family` | Changes the font |
+| `text-align` | Aligns text |
+| `text-indent` | Indents the first line |
+| `text-transform` | Changes text capitalization |
+| `list-style-type` | Changes list markers |
+| `list-style-position` | Controls marker position |
+| `inherit` | Takes the parent's computed property value |
+
+## Conclusion
+
+Today I learned how CSS controls the arrangement of elements using `justify-content`, how inheritance works between parent and child elements, and how to style lists and text using different CSS properties.
+
+These concepts help me create better layouts and improve the appearance of my web pages. I will continue practising them through small HTML and CSS projects.
