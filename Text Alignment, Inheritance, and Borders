@@ -1,0 +1,254 @@
+# CSS Learning Notes: Text Alignment, Inheritance, and Borders
+
+## 1. CSS Text Alignment (`text-align`)
+
+The `text-align` property is used to align text horizontally inside an element.
+
+### Syntax
+
+```css
+selector {
+    text-align: value;
+}
+```
+
+### Common values
+
+| Value | Purpose |
+|---|---|
+| `left` | Aligns text to the left |
+| `right` | Aligns text to the right |
+| `center` | Centers text |
+| `justify` | Spreads text across the available width |
+
+### Example
+
+```css
+p {
+    text-align: center;
+}
+```
+
+This centers the text inside the paragraph element.
+
+The `text-align` property is inherited, so if it is applied to a parent element, its child elements can inherit the alignment.
+
+---
+
+## 2. CSS Inheritance
+
+Inheritance is a CSS feature in which some properties applied to a parent element are passed down to its child elements.
+
+For example:
+
+```html
+<div class="container">
+    <h1>Hello World</h1>
+    <p>This is a paragraph.</p>
+</div>
+```
+
+```css
+.container {
+    text-align: center;
+}
+```
+
+Both the heading and paragraph text become centered without writing separate CSS rules.
+
+### Why does this work?
+
+The `text-align` property is inherited. The child elements receive the alignment from their parent unless another rule overrides it.
+
+Inheritance helps reduce repeated CSS code.
+
+**Note:** Not every CSS property is inherited. For example, `margin`, `padding`, and `border` are not inherited by default.
+
+---
+
+## 3. `text-align` vs. `align-items`
+
+These two properties are used for different purposes.
+
+### `text-align`
+
+Aligns text inside an element.
+
+```css
+.container {
+    text-align: center;
+}
+```
+
+### `align-items`
+
+Aligns child items inside a Flexbox or Grid container along the cross axis.
+
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+### Differences
+
+| `text-align` | `align-items` |
+|---|---|
+| Aligns text | Aligns child items |
+| Does not require Flexbox | Commonly used with Flexbox and Grid |
+| `center` centers text horizontally | `center` aligns items on the cross axis |
+| Applied to a text container | Applied to a layout container |
+
+### Understanding the cross axis
+
+In Flexbox, the cross axis depends on the `flex-direction`.
+
+- `flex-direction: row;` → cross axis is vertical.
+- `flex-direction: column;` → cross axis is horizontal.
+
+Example:
+
+```css
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+```
+
+Here, the items are aligned vertically in the center.
+
+---
+
+## 4. CSS Borders
+
+The `border` property adds a border around an element.
+
+### Syntax
+
+```css
+border: width style color;
+```
+
+Example:
+
+```css
+.card {
+    border: 2px solid black;
+}
+```
+
+This adds a 2px solid black border on all four sides of the element.
+
+### Border styles
+
+| Style | Description |
+|---|---|
+| `solid` | Continuous line |
+| `dashed` | Broken lines |
+| `dotted` | Dots |
+| `double` | Two lines |
+| `none` | No border |
+
+---
+
+## 5. `border-bottom`
+
+The `border-bottom` property adds a border only to the bottom side of an element.
+
+### Syntax
+
+```css
+border-bottom: width style color;
+```
+
+### Example
+
+```css
+.card {
+    border-bottom: 3px solid black;
+}
+```
+
+This creates a 3px solid black bottom border.
+
+Other examples:
+
+```css
+border-bottom: 2px solid blue;
+border-bottom: 1px dashed gray;
+border-bottom: 4px dotted red;
+```
+
+### Difference between `border` and `border-bottom`
+
+| `border` | `border-bottom` |
+|---|---|
+| Adds borders to all four sides | Adds a border only to the bottom |
+| Applies to top, right, bottom, left | Applies only to the bottom |
+| Example: `border: 2px solid black;` | Example: `border-bottom: 2px solid black;` |
+
+If you want only the bottom border, you can use:
+
+```css
+.card {
+    border: none;
+    border-bottom: 2px solid black;
+}
+```
+
+---
+
+## 6. Troubleshooting CSS Borders
+
+Sometimes a border may appear differently than expected because of another CSS rule.
+
+### Example
+
+```css
+.card {
+    border: 2px solid black;
+    border-bottom: 3px solid red;
+}
+```
+
+In this example:
+
+- The black border appears on the top, left, and right.
+- The bottom border becomes red and 3px thick.
+
+If we want only a bottom border:
+
+```css
+.card {
+    border: none;
+    border-bottom: 3px solid red;
+}
+```
+
+When a CSS property does not work as expected, check:
+
+1. Whether the correct selector is being used.
+2. Whether another CSS rule is overriding the property.
+3. Whether the CSS file is correctly linked.
+4. Whether the browser is displaying an older cached version.
+
+---
+
+## 7. Quick Revision
+
+| Property | Purpose |
+|---|---|
+| `text-align` | Aligns text horizontally |
+| `align-items` | Aligns items on the cross axis |
+| `border` | Adds a border on all four sides |
+| `border-bottom` | Adds a border only at the bottom |
+| `inherit` | Makes a property take its value from the parent |
+| `flex-direction` | Defines the direction of Flexbox items |
+
+## Conclusion
+
+CSS helps us control the appearance and layout of web elements. Understanding text alignment, inheritance, borders, and Flexbox alignment makes it easier to design webpages and solve styling problems.
+
+These concepts are useful when creating business cards, navigation bars, forms, buttons, and other web layouts.
