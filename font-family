@@ -1,0 +1,88 @@
+# CSS Learning Notes: Font Family, Margin and Padding Shorthands
+
+## 1. Font Family
+
+The `font-family` property is used to change the style of text by selecting a font.
+
+**Example:**
+```css
+h1 {
+    font-family: Arial, sans-serif;
+}
+```
+
+- `Arial` is the preferred font.
+- `sans-serif` is a fallback font if Arial is unavailable.
+- We can use different font families to improve the appearance of a webpage.
+
+## 2. Margin Shorthand
+
+Margin creates space **outside an element's border**.
+
+We can write all four margin values in one line.
+
+```css
+.box {
+    margin: 10px 20px 30px 40px;
+}
+```
+
+The order is:
+
+- First: Top
+- Second: Right
+- Third: Bottom
+- Fourth: Left
+
+**Other shorthand examples:**
+
+```css
+margin: 20px;             /* All four sides */
+margin: 10px 20px;        /* Top/Bottom, Left/Right */
+margin: 10px 20px 30px;   /* Top, Left/Right, Bottom */
+```
+
+## 3. Padding Shorthand
+
+Padding creates space **inside an element's border**, between the content and the border.
+
+```css
+.box {
+    padding: 10px 20px 30px 40px;
+}
+```
+
+The order is the same as margin:
+
+- Top
+- Right
+- Bottom
+- Left
+
+**Other shorthand examples:**
+
+```css
+padding: 20px;             /* All four sides */
+padding: 10px 20px;         /* Top/Bottom, Left/Right */
+padding: 10px 20px 30px;    /* Top, Left/Right, Bottom */
+```
+
+## 4. Difference Between Margin and Padding
+
+| Margin | Padding |
+|---|---|
+| Space outside the border | Space inside the border |
+| Separates elements | Creates space around content |
+| Background does not extend into margin | Background extends into padding |
+
+## 5. Important Things to Remember
+
+- `font-family` changes the text font.
+- Margin controls outside spacing.
+- Padding controls inside spacing.
+- Shorthand properties reduce repeated CSS code.
+- The four-value order is always Top, Right, Bottom, Left.
+
+## Today's Learning Summary
+
+Today I learned about CSS font-family and how to use margin and padding shorthand properties. I also understood the difference between inside and outside spacing and practised writing CSS with fewer lines of code.
