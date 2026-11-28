@@ -1,0 +1,353 @@
+# CSS Styling: Fonts, Spacing, Images, and Hover Effects
+
+## 1. Font Family
+
+The `font-family` property is used to change the font style of text on a webpage. Different fonts can make a website look simple, modern, professional, or decorative.
+
+### Syntax
+
+```css
+selector {
+    font-family: Arial, sans-serif;
+}
+```
+
+### Example
+
+```css
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: Georgia, serif;
+}
+```
+
+In this example, the body text uses Arial, while the heading uses Georgia.
+
+We can specify multiple fonts as fallbacks. If the first font is unavailable, the browser tries the next one.
+
+```css
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+```
+
+### Common Font Families
+
+| Font | Type | Use |
+|---|---|---|
+| Arial | Sans-serif | Simple and readable text |
+| Georgia | Serif | Traditional and elegant headings |
+| Verdana | Sans-serif | Clear text on screens |
+| Times New Roman | Serif | Formal documents |
+| Trebuchet MS | Sans-serif | Friendly, modern design |
+
+---
+
+## 2. Margin
+
+Margin is the space outside an element's border. It is used to separate an element from other elements.
+
+### Example
+
+```css
+.box {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+```
+
+Instead of writing all four properties separately, we can use margin shorthand.
+
+### Margin Shorthand
+
+**One value – all four sides**
+
+```css
+margin: 20px;
+```
+
+Applies 20px margin to the top, right, bottom, and left.
+
+**Two values – vertical and horizontal**
+
+```css
+margin: 10px 20px;
+```
+
+- 10px – top and bottom
+- 20px – left and right
+
+**Three values**
+
+```css
+margin: 10px 20px 30px;
+```
+
+- 10px – top
+- 20px – left and right
+- 30px – bottom
+
+**Four values**
+
+```css
+margin: 10px 20px 30px 40px;
+```
+
+The order is:
+
+**Top → Right → Bottom → Left (TRBL)**
+
+---
+
+## 3. Padding
+
+Padding is the space between an element's content and its border. It creates space inside the element.
+
+### Example
+
+```css
+.box {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+```
+
+Padding can also be written using shorthand.
+
+### Padding Shorthand
+
+```css
+padding: 20px;
+```
+
+Applies equal padding to all sides.
+
+```css
+padding: 10px 20px;
+```
+
+Applies 10px to top and bottom and 20px to left and right.
+
+```css
+padding: 10px 20px 30px;
+```
+
+Applies 10px to top, 20px to left and right, and 30px to bottom.
+
+```css
+padding: 10px 20px 30px 40px;
+```
+
+The order is Top, Right, Bottom, and Left.
+
+---
+
+## 4. Difference Between Margin and Padding
+
+| Margin | Padding |
+|---|---|
+| Creates space outside the border | Creates space inside the border |
+| Separates an element from other elements | Separates content from its border |
+| Background color does not fill the margin | Background color fills the padding area |
+| Can be used to position or separate elements | Can be used to make content less crowded |
+
+### Example
+
+```css
+.card {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid black;
+}
+```
+
+In this example, margin creates space around the card, while padding creates space between the card's content and border.
+
+---
+
+## 5. Styling Images
+
+Images can be styled using CSS properties such as width, height, border, border-radius, and object-fit.
+
+### Example
+
+```css
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+```
+
+- `width` controls the image width.
+- `height` controls the image height.
+- `object-fit: cover` fills the image area while maintaining its aspect ratio, cropping excess if necessary.
+- `border-radius: 50%` creates a circular image when width and height are equal.
+
+### Making a Profile Picture Circular
+
+```css
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+```
+
+A circular profile picture is commonly used in business cards, profile sections, portfolios, and personal websites.
+
+---
+
+## 6. Hover Effects
+
+The `:hover` pseudo-class is used to apply styles when the mouse pointer moves over an element.
+
+### Syntax
+
+```css
+selector:hover {
+    property: value;
+}
+```
+
+### Example: Changing Color
+
+```css
+button {
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    background-color: gray;
+}
+```
+
+When the user moves the mouse over the button, its background color changes from black to gray.
+
+### Example: Enlarging an Image
+
+```css
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+```
+
+The image becomes slightly larger when hovered over.
+
+---
+
+## 7. CSS Transition
+
+The `transition` property makes changes in CSS happen smoothly instead of immediately.
+
+### Syntax
+
+```css
+transition: property duration timing-function;
+```
+
+### Example
+
+```css
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+```
+
+- `transform` controls movement or scaling.
+- `0.3s` defines the duration.
+- `ease` controls the transition speed.
+- `box-shadow` adds a shadow effect.
+
+Transitions are commonly used for cards, buttons, links, images, and navigation menus.
+
+---
+
+## 8. CSS Transform
+
+The `transform` property changes the position, size, rotation, or shape of an element without changing the normal document flow.
+
+### Common Transform Functions
+
+| Function | Purpose |
+|---|---|
+| `translate()` | Moves an element |
+| `translateY()` | Moves an element vertically |
+| `translateX()` | Moves an element horizontally |
+| `scale()` | Changes the size |
+| `rotate()` | Rotates an element |
+| `skew()` | Slants an element |
+
+### Example
+
+```css
+.card:hover {
+    transform: translateY(-5px);
+}
+```
+
+The card moves 5px upward when hovered.
+
+```css
+button:hover {
+    transform: scale(1.05);
+}
+```
+
+The button becomes slightly larger when hovered.
+
+---
+
+## 9. Combining Hover and Transition
+
+Hover and transition are often used together to create interactive designs.
+
+```css
+.card {
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+```
+
+The transition property makes the movement and shadow change smoothly.
+
+Without a transition, the hover effect happens instantly.
+
+---
+
+## Summary
+
+- `font-family` changes the font style of text.
+- `margin` creates space outside an element.
+- `padding` creates space inside an element.
+- Shorthand properties reduce repeated CSS code.
+- `border-radius` changes the shape of corners and can create circular images.
+- `object-fit` controls how an image fits within its dimensions.
+- `:hover` applies styles when the mouse pointer is over an element.
+- `transition` makes style changes smooth.
+- `transform` moves, scales, rotates, or changes an element's shape.
+
+These properties are important for creating attractive, readable, and interactive webpages using CSS.
